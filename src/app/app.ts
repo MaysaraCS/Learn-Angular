@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 // import { RouterOutlet } from '@angular/router';
+import { Post } from './post/post';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { Component, signal } from '@angular/core';
   // imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
+  imports: [Post],
 })
 export class AppComponent {
   //protected readonly title = signal('angular-basics');
