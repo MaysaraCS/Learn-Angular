@@ -1,10 +1,14 @@
 <input (keyup)="changeImage($event)" [value]="imageURL()" />
 
 <app-post [postImage]="imageURL()" (imageSelected)="loImage($event)">
-    <p>Here is the post content</p>
+  <p>Here is the post content</p>
 </app-post>
 <!-- <app-post></app-post> -->
 
-<p>{{ name().toUpperCase() }}</p>
+<p>{{ name() | titlecase }}</p>
 <p>{{ getName() }}</p>
 <p>{{ 5 + 2 }}</p>
+<p>{{ CurrentDate() | date : 'M/d/yy' }}</p>
+<p>{{ cost() | currency : 'JPY' }}</p>
+<p>{{ temprature() | number : '1.0-0' }}</p>
+<pre>{{ pizza() | json }}</pre>

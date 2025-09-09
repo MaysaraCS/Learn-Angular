@@ -1,0 +1,11 @@
+img{
+    width: 50%;
+    height: 50%;
+}
+
+:host{
+    font-size: larger;
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
