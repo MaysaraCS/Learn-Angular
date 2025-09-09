@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -7,5 +7,6 @@ import { Component, input } from '@angular/core';
   styleUrl: './post.css'
 })
 export class Post {
-  postImage = input('');
+  postImage = input.required<string>();
+  imageSelected = output<string>();
 }

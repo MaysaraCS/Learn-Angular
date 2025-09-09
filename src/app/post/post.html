@@ -1,2 +1,2 @@
 
-<img [src]="postImage()" />
+<img [src]="postImage()" (click)="imageSelected.emit(postImage())"/>

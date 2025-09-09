@@ -22,4 +22,7 @@ export class AppComponent {
   getName(){
     return this.name();
   }
+  loImage(e: string){
+    console.log(e);
+  }
 }
