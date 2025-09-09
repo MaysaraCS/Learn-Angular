@@ -1,10 +1,21 @@
+@if (blueClass()) {
+<p>blue Class!</p>
+}
+<button
+  [ngStyle]="{ 'font-size.px': fontSize() }"
+  (click)="blueClass.set(!blueClass())"
+  [ngClass]="{ blue: blueClass() }"
+>
+  Click Here!
+</button>
+<hr />
 <input (keyup)="changeImage($event)" [value]="imageURL()" />
-
-<app-post [postImage]="imageURL()" (imageSelected)="loImage($event)">
-  <p>Here is the post content</p>
+@for(image of images(); let idx = $index; track idx) {
+<app-post [postImage]="image" (imageSelected)="loImage($event)">
+  <p>{{ idx }}</p>
 </app-post>
 <!-- <app-post></app-post> -->
-
+}
 <p>{{ name() | titlecase }}</p>
 <p>{{ getName() }}</p>
 <p>{{ 5 + 2 }}</p>
